@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom warna */
+:root {
+  --invofest-color: #7f1d1d;
+  --invofest-secondary: #fca5a5;
+}

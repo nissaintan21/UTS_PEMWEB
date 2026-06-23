@@ -1,3 +1,4 @@
+import {QueryClient,QueryClientProvider} from "@tanstack/react-query";
 import Beranda from "./pages/Beranda";
 import Seminar from "./pages/Seminar";
 import Competition from "./pages/Competition";
@@ -25,8 +26,11 @@ import UsersIndex from "./pages/dashboard/users/UsersIndex";
 import UsersCreate from "./pages/dashboard/users/UsersCreate";
 import UsersEdit from "./pages/dashboard/users/UsersEdit";
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
+    <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
@@ -70,6 +74,7 @@ function App() {
 </Route>
       </Routes>
     </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 
